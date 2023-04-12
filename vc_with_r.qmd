@@ -1,0 +1,83 @@
+---
+title: "Version Control with R"
+format: 
+  html:
+    standalone: true
+editor: source
+
+---
+
+This mini-workshop is a heavily abbreviated version of https://happygitwithr.com
+
+### Pre-setup
+
+It can be highly worth the effort to make sure your R and RStudio are up-to-date and the your packages are too
+
+To update your R packages run:
+
+```{r, eval = FALSE}
+update.packages(ask = FALSE, checkBuilt = TRUE)
+```
+
+
+## Set up
+
+Make sure Git is installed
+
+Windows:
+
+- Git for Windows (aka Git Bash)
+
+
+Mac OS
+
+- run on **terminal**: `git --version` then `git config`
+    - if git isn't installed there should be a pop up saying to install Xcode
+
+### Create Github account
+
+Head over to https://github.com and register for an account (if you don't have one already).
+
+### Configuring Git
+
+You can either do this through the terminal with:
+
+```{bash, eval=FALSE}
+git config --global user.name 'Jane Doe'
+git config --global user.email 'jane@example.com'
+git config --global --list
+```
+
+**OR**
+
+You can make great use of the `usethis` package in R
+
+```{r, eval = FALSE}
+## install if needed (do this exactly once):
+## install.packages("usethis")
+
+library(usethis)
+use_git_config(user.name = "Jane Doe", user.email = "jane@example.org")
+```
+
+Use the email address that you used for GitHub.
+
+
+## Project version control
+
+### New project - Github first
+
+### Existing project - Github first
+
+## Workflows
+
+- add
+- commit
+- pull
+- push
+
+What to commit?
+
+How to ignore files?
+
+Seeing the history
